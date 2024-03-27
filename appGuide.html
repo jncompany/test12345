@@ -1,0 +1,146 @@
+<!-- app/src/main/assets/tutorial.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Tutorial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트를 사용합니다. */
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: bold; /* 폰트 굵기를 bold로 설정 */
+        }
+        
+        .tabs {
+            display: flex;            
+            width: 100%;
+            background-color: #f4f4f4;
+            z-index: 2; /* 탭 영역의 z-index를 높여 겹치는 요소 위에 위치하도록 조절 */
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab.active {
+            background-color: #51a1cb;
+            color: #fff;
+        }
+
+        .content-container {
+            margin-top: 50px; /* 탭 영역이 고정되어 있기 때문에 컨텐츠를 아래로 밀어줌 */
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+
+        .code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #3F51B5;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('.tab');
+            var contents = document.querySelectorAll('.content');
+
+            tabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            contents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            document.getElementById(tabName + '-content').classList.add('active');
+        }
+
+        // 페이지 로딩 후 첫 번째 탭을 활성화
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('basic');
+        });
+    </script>
+</head>
+<body>
+
+<div class="tabs">
+    <div id="basic" class="tab" onclick="showTab('basic')">기본</div>
+    <div id="rocord" class="tab" onclick="showTab('rocord')">기록</div>
+    <div id="share" class="tab" onclick="showTab('share')">출조공유</div>
+    <div id="firend" class="tab" onclick="showTab('firend')">친구관리</div>    
+</div>
+
+<div class="content-container">
+    <div id="basic-content" class="content">
+        <img src="./guide_1_1.jpg" alt="basic Image"/>
+		<img src="./guide_1_2.jpg" alt="basic Image"/>
+		<img src="./guide_1_3.jpg" alt="basic Image"/>
+    </div>
+
+    <div id="rocord-content" class="content">
+        <img src="./guide_2_1.jpg" alt="basic Image"/>
+		<img src="./guide_2_2.jpg" alt="basic Image"/>
+		<img src="./guide_2_3.jpg" alt="basic Image"/>
+		<img src="./guide_2_4.jpg" alt="basic Image"/>
+    </div>
+
+    <div id="share-content" class="content">
+        <img src="./guide_3_1.jpg" alt="basic Image"/>
+		<img src="./guide_3_2.jpg" alt="basic Image"/>
+    </div>
+
+    <div id="firend-content" class="content">
+        <img src="./guide_4_1.jpg" alt="basic Image"/>
+    </div>
+</div>
+
+</body>
+</html>
