@@ -32,6 +32,10 @@
             max-width: 100%;
             height: auto;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -54,27 +58,28 @@
 
     <div class="tab-content">
         <div class="tab-pane fade show active" id="basic">
-            <img src="./guide_1_1.jpg" alt="basic Image"/>
-            <img src="./guide_1_2.jpg" alt="basic Image"/>
-            <img src="./guide_1_3.jpg" alt="basic Image"/>
+            <img src="./guide_1_1.jpg" alt="basic Image" class="lazyload" data-src="./guide_1_1.jpg"/>
+            <img src="./guide_1_2.jpg" alt="basic Image" class="lazyload" data-src="./guide_1_2.jpg"/>
+            <img src="./guide_1_3.jpg" alt="basic Image" class="lazyload" data-src="./guide_1_3.jpg"/>
         </div>
         <div class="tab-pane fade" id="record">
-            <img src="./guide_2_1.jpg" alt="basic Image"/>
-            <img src="./guide_2_2.jpg" alt="basic Image"/>
-            <img src="./guide_2_3.jpg" alt="basic Image"/>
-            <img src="./guide_2_4.jpg" alt="basic Image"/>
+            <img src="./guide_2_1.jpg" alt="basic Image" class="lazyload" data-src="./guide_2_1.jpg"/>
+            <img src="./guide_2_2.jpg" alt="basic Image" class="lazyload" data-src="./guide_2_2.jpg"/>
+            <img src="./guide_2_3.jpg" alt="basic Image" class="lazyload" data-src="./guide_2_3.jpg"/>
+            <img src="./guide_2_4.jpg" alt="basic Image" class="lazyload" data-src="./guide_2_4.jpg"/>
         </div>
         <div class="tab-pane fade" id="share">
-            <img src="./guide_3_1.jpg" alt="basic Image"/>
-            <img src="./guide_3_2.jpg" alt="basic Image"/>
+            <img src="./guide_3_1.jpg" alt="basic Image" class="lazyload" data-src="./guide_3_1.jpg"/>
+            <img src="./guide_3_2.jpg" alt="basic Image" class="lazyload" data-src="./guide_3_2.jpg"/>
         </div>
         <div class="tab-pane fade" id="friend">
-            <img src="./guide_4_1.jpg" alt="basic Image"/>
+            <img src="./guide_4_1.jpg" alt="basic Image" class="lazyload" data-src="./guide_4_1.jpg"/>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js"></script>
 </body>
 </html>
