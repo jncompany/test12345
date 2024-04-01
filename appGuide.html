@@ -10,7 +10,6 @@
     <style>
         body {
             font-family: 'Spoqa Han Sans', 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트를 사용합니다. */
-            margin: 20px;
         }
 
         .content {
@@ -24,6 +23,10 @@
         img {
             max-width: 100%;
             height: auto;
+        }
+
+        .nav-tabs {
+            background-color: #ffffff; /* 탭의 배경색을 지정합니다. */
         }
 
     </style>
@@ -53,7 +56,7 @@
 <body>
 
     <div class="container">
-        <ul class="nav nav-tabs nav-fill">
+        <ul class="nav nav-tabs nav-fill sticky-top">
             <li class="nav-item">
                 <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic">기본</a>
             </li>
