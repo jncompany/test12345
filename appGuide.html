@@ -13,42 +13,6 @@
             margin: 20px;
         }
 
-        h1 {
-            color: #333;
-            font-weight: bold; /* 폰트 굵기를 bold로 설정 */
-        }
-        
-        .tabs {
-            display: flex;            
-            width: 100%;
-            background-color: #f4f4f4;
-            z-index: 2; /* 탭 영역의 z-index를 높여 겹치는 요소 위에 위치하도록 조절 */
-        }
-
-        .tab {
-            flex: 1;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .tab:hover {
-            background-color: #ddd;
-        }
-
-        .tab.active {
-            background-color: #51a1cb;
-            color: #fff;
-        }
-
-        .content-container {
-            margin-top: 50px; /* 탭 영역이 고정되어 있기 때문에 컨텐츠를 아래로 밀어줌 */
-            overflow-y: auto; /* 세로 스크롤바를 자동으로 표시하고 필요할 때만 표시 */
-            max-height: calc(100vh - 130px); /* 화면 높이의 100%에서 탭 영역과 상하 여백의 높이를 뺀 값으로 최대 높이 설정 */
-            width: 100%; /* .content-container의 너비를 화면의 100%로 설정 */
-            margin-left: auto; /* 가운데 정렬을 위해 왼쪽 여백을 auto로 설정 */
-            margin-right: auto; /* 가운데 정렬을 위해 오른쪽 여백을 auto로 설정 */
-        }
         .content {
             display: none;
         }
@@ -57,26 +21,11 @@
             display: block;
         }
 
-        p {
-            color: #666;
-        }
-
-        .step {
-            margin-bottom: 20px;
-        }
-
         img {
             max-width: 100%;
             height: auto;
         }
 
-        .nav-tabs {
-            background-color: #ffffff; /* 탭의 배경색을 지정합니다. */
-        }
-
-        .nav-tabs .nav-item {
-            margin-bottom: -1px; /* 탭 아래쪽 테두리와 겹치지 않도록 마진을 조정합니다. */
-        }
     </style>
     <script>
         function showTab(tabName) {
@@ -104,7 +53,7 @@
 <body>
 
     <div class="container">
-        <ul class="nav nav-tabs nav-fill sticky-top">
+        <ul class="nav nav-tabs nav-fill">
             <li class="nav-item">
                 <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic">기본</a>
             </li>
